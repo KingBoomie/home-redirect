@@ -4,6 +4,10 @@
     <div id="root"></div>
   </body>
   <script>
-    window.location.href = "https://80.235.117.129"
+    const {pathname, search} = window.document.location;
+    const possiblePort = pathname.split("/")[2];
+    const otherPath = pathname.split("/").splice(2).join("/")
+    const port = possiblePort ? ":" + possiblePort : "";
+    window.location.href = `https://80.235.117.129${port}${otherPath}${search}`
   </script>
 </html>
