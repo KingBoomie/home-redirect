@@ -4,11 +4,12 @@
 <div id="root"></div>
 </body>
 <script>
+  const ip = "80.235.117.129"
   const {pathname, search} = window.document.location;
   const possiblePort = pathname.split("/")[2];
   //const otherPath = pathname.split("/").splice(3).join("/");
   const otherPath = "";
   const port = possiblePort ? ":" + possiblePort : "";
-  window.location.href = `http://80.235.117.129${port}${otherPath}${search}`
+  window.location.href = `http://${ip}${port}${otherPath}${search}`
 </script>
 </html>
